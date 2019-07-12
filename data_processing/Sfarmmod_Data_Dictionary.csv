@@ -1,0 +1,311 @@
+InOut,Variable Name,Definition,Source of Input,Units,SpatialUnit,NoPerSpatialUnit,DataType,Remarks
+Impressions.AgicModule,,,,,,,,
+,climsave.agicmodule.Data.basinscaleClusterData,A Class to handle crop input data by basinscale Cluster ,,,,,,
+,climsave.agicmodule.Data.basinscaleClusterData.#ctor(System.Int32@;System.Int32@),"Initializes a new instance of the <see cref=""T:climsave.agicmodule.Data.ClusterCropData"" /> class. ",,,,,,
+,climsave.agicmodule.Data.ClusterCropData,A Class to handle crop input data by agro climatic Cluster ,,,,,,
+,climsave.agicmodule.Data.ClusterCropData.#ctor(System.Int32@;System.Int32@), ,,,,,,
+,climsave.agicmodule.Data.ClusterData.#ctor(System.Int32@;System.Int32@),Constructor ,,,,,,None
+,climsave.agicmodule.Data.ClustermetData.#ctor,"Initializes a new instance of the <see cref=""T:climsave.agicmodule.Data.ClusterCropData"" /> ",,,,,,
+,climsave.agicmodule.Data.ClustersoilData,A data class to contain soil parameters ,,,,,,
+,climsave.agicmodule.Data.ClustersoilData.#ctor,"Initializes a new instance of the <see cref=""T:climsave.agicmodule.Data.ClusterCropData"" /> ",,,,,,
+,climsave.agicmodule.Data.CropData,a sub data class to describe the data associated with each of the crops on each of the possible soils in a grid cell ,,,,,,
+,climsave.agicmodule.Data.CropData.#ctor(System.Int32@;System.Int32),Constructor ,,,,,,
+,climsave.agicmodule.Data.CropData.ByCrop,A structure array to hold scenario specific data for an array of crops ,,,,,,This is expressed through MapGrids and CropCluster data to provide a choice of mechanisms
+,climsave.agicmodule.Data.LandCoverData,A sub data class to describe 100% of a grid cells land cover ,,,,,,
+,climsave.agicmodule.Data.LandCoverData.rIAM_PA_VARIABLES,A reorgansied set of protected area variables from SPECIES' PA module ,,,,,,Added 11/12/2015 Included for data dictionary needs; but not implemented in IAP2 beyond safe initialization
+,climsave.agicmodule.Data.LandCoverData.#ctor,Constructor ,,,,,,
+,climsave.agicmodule.Data.MapGridData,The main spatial data class that contains all the grid cell specific data ,,,,,,
+,climsave.agicmodule.Data.MapGridData.Nuts2Data,A sub data class to describe the membership of a grid cell in the overlying NUTS 2 regions (1 grid cell belongs to more than one NUTS2 region) ,,,,,,
+,climsave.agicmodule.Data.MapGridData.RiverBasinData,A sub data class to describe the membership of a grid cell in an overlying River basin (1 grid cell may belong to more than one River basis) ,,,,,,
+,climsave.agicmodule.Data.MapGridData.SoilData,A  data class to describe a grid cells membership of soil type polygons (1 grid cell contains many soils) ,,,,,,
+,climsave.agicmodule.Data.MapGridData.IAP2_Species_Variables,New Species variables introduced for IAP2 ,,,,,,default implement and intiatlization only for now. Maybe deprecated by the mapgrid().Species_EVN(23) variable now
+,climsave.agicmodule.Data.MapGridData.#ctor(System.Int32@;System.Int32@;System.Int32@;System.Int32@;System.Int32@),Constructor ,,,,,,
+,climsave.agicmodule.Data.NamespaceDoc,This namespace contain the data definitions for the META SFARMMOD dll ,,,,,,
+,climsave.agicmodule.Data.NUTS2regiondata, A Class to handle NUTS,,,,,,
+,climsave.agicmodule.Data.NUTS2regiondata.#ctor(System.Int32@;System.Int32@),Contructor ,,,,,,None
+,climsave.agicmodule.Data.RiverBasinWater,A data class to store hydrological data from watergap module per river basin ,,,,,,
+,climsave.agicmodule.Data.ScenarioData,a data class for storing and passing the scenario parameterisation data {may originate from a scenario data file but maybe modified by the user}<FromTo>Inputs and Outputs</FromTo> ,,,,,,May originate from a scenario database but may be modified by the user
+,climsave.agicmodule.Data.ScenarioData.CropDetails,A sub data class to hold scenario specific crop data ,,,,,,
+,climsave.agicmodule.Data.ScenarioData.#ctor(System.Int32@;System.Int32@),Constructor ,,,,,,
+,climsave.agicmodule.Data.ScenarioData.ShallowCopy,Create a shallow copy ,,,,,,
+,climsave.agicmodule.Data.ScenarioData.Output,A data class variable to hold scenario specific details ,Output,,,,outputs,
+,climsave.agicmodule.My.Resources.Resources,A strongly-typed resource class; for looking up localized strings; etc.,,,,,,
+,climsave.agicmodule.My.Resources.Resources.ResourceManager,Returns the cached ResourceManager instance used by this class.,,,,,,
+,climsave.agicmodule.My.Resources.Resources.Culture,Overrides the current thread's CurrentUICulture property for allresource lookups using this strongly typed resource class.,,,,,,
+,climsave.agicmodule.My.Resources.Resources.strDataDir,Looks up a localized string similar to V:\IMPRESSIONS\AgricLandUse\DataDir\IAP2 Pucker Data\.,,,,,,
+,climsave.agicmodule.Working.clsAgricModule,The main working class of the agriculture module containing the subroutines and functions ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.#ctor(System.Int32@;System.String),Constructor ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.loadNUTS2(System.String;climsave.agicmodule.Data.MapGridData[]@;climsave.agicmodule.Data.NUTS2regiondata[]@;System.String;System.String@),Initialisation loads NUTS2 parameters ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.loadGriddedSoilClusters(System.String;System.String;climsave.agicmodule.Data.MapGridData[]@;System.String@;System.Int32@;System.String@),Initialisation loads gridded soil cluster parameters ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.loadcomboClusters(System.String;System.String;System.String@;climsave.agicmodule.Data.ClusterCropData[];climsave.agicmodule.Data.basinscaleClusterData[];System.Int32;System.Int32;System.String@),Initialisation loads combocluster parameters ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.loadMetClusters(climsave.agicmodule.Data.ScenarioData;System.String[];climsave.agicmodule.Data.ClustermetData[]@;MENDELU_Yields_Mk1.TYieldsInData@;System.String@;System.Int32;System.String@),Initiatlisation loads metcluster parameters ,,,,,,The baselien climate file is the default and the code will build a file string for the specific scenario
+,climsave.agicmodule.Working.clsAgricModule.MockMetagotilwa(climsave.agicmodule.Data.ScenarioData;System.String;MetaGOTILWA_DLL.outMMstruct@;climsave.agicmodule.Data.basinscaleClusterData[];System.String@;System.Int32;System.Int16@;System.String@),only used for desktop debugging with meta Gotilwa ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.loadbaselinedata(System.String;climsave.agicmodule.Data.MapGridData[]@;climsave.agicmodule.Data.RiverBasinWater[]@;climsave.agicmodule.Data.ScenarioData@;System.String@;System.Int32@;climsave.agicmodule.Data.basinscaleClusterData[]@;System.Int32@;System.String@),Intialisation loads baseline data ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.loadbaseprotectedareas(System.String;climsave.agicmodule.Data.MapGridData[]@;System.String@;System.Int32;System.String@),Initialization loads baseline protected areas ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.loadSoilClusterData(System.String;climsave.agicmodule.Data.ClustersoilData[]@;System.String@;System.Int32;System.String@),Initialisation load soil cluster parameters ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.loadforestdata(System.String;climsave.agicmodule.Data.ClustersoilData[]@;MENDELU_Yields_Mk1.TYieldsInData@;System.String@;climsave.agicmodule.Data.basinscaleClusterData[]@;climsave.agicmodule.Data.ClusterCropData[];System.Int32;System.Int32;System.String@),Probably only called for desktop debugging<scope>Public</scope> ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.LoadBasinID(System.String;System.String@;climsave.agicmodule.Data.RiverBasinWater[]@;climsave.agicmodule.Data.MapGridData[]@;System.Int32@;System.String@),Initialization ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.NUTS2Dictionary,Doctionary (string; Integer) of NUTS2 Names and IDs ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.InternalDataConnection,This class manages the connection to the local data store on the webserver ,,,,,,
+Working.clsAgricModule.InternalDataConnection,,,,,,,,
+,climsave.agicmodule.CropData,An internal data class to carry local crop specific data ,,,,,,
+,climsave.agicmodule.CropData.#ctor(System.Int32@),Constructor ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.agricmodel(climsave.agicmodule.Data.MapGridData[]@;climsave.agicmodule.Data.basinscaleClusterData[]@;climsave.agicmodule.Data.ClusterCropData[];climsave.agicmodule.Data.ClustermetData[]@;climsave.agicmodule.Data.ClustersoilData[]@;MENDELU_Yields_Mk1.TYieldsInData@;MetaGOTILWA_DLL.inpMMstruct@;MetaGOTILWA_DLL.outMMstruct@;climsave.agicmodule.Data.ScenarioData@;climsave.agicmodule.Data.RiverBasinWater[]@;climsave.agicmodule.Data.NUTS2regiondata[]@;System.String@;System.String;System.String@;System.Int32@;System.Int32@;System.Int32@;System.Int32@;System.Int32@;System.String[];System.Int16;System.Int16;System.Int16;System.Boolean;System.Boolean;System.Boolean;System.String@),main Working subroutine ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.Rob_Dunford_Sums(System.String@;System.String@;System.String@;climsave.agicmodule.Data.MapGridData[]@;climsave.agicmodule.Data.basinscaleClusterData[]@;System.Int32;System.Int32;System.Int32;System.String@),Subroutine to return IAP2/rIAM new output for SPECIES ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.CalcAgricArea(climsave.agicmodule.Data.MapGridData[]@;climsave.agicmodule.Data.basinscaleClusterData[]@;climsave.agicmodule.Data.ClusterCropData[];climsave.agicmodule.Data.ClustersoilData[]@;System.Int32@;System.Int16;System.String@),Private sub calculates Agricultural Areas ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.CalcCropping(climsave.agicmodule.Data.MapGridData[]@;climsave.agicmodule.Data.ScenarioData@;MENDELU_Yields_Mk1.TYieldsInData@;MetaGOTILWA_DLL.inpMMstruct@;MetaGOTILWA_DLL.outMMstruct@;climsave.agicmodule.Data.basinscaleClusterData[]@;climsave.agicmodule.Data.ClusterCropData[];climsave.agicmodule.Data.ClustermetData[]@;climsave.agicmodule.Data.ClustersoilData[]@;climsave.agicmodule.Data.RiverBasinWater[]@;climsave.agicmodule.Data.NUTS2regiondata[]@;System.String@;System.String;System.String@;System.String[];System.Int32;System.Int32;System.Int32;System.Int32;System.Int32;System.Boolean@;System.Boolean@;System.Boolean@;System.Int16@;System.Int16@;System.Int16@;System.String@),Private Subroutine calculate cropping ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.getareaofcluster(climsave.agicmodule.Data.MapGridData[]@;climsave.agicmodule.Data.ScenarioData@;climsave.agicmodule.Data.basinscaleClusterData[]@;climsave.agicmodule.Data.ClusterCropData[];System.Int32;System.Int32;System.Int32;System.String@;System.String@),Private subroutine ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.MetaGOTILWA(MetaGOTILWA_DLL.inpMMstruct;MetaGOTILWA_DLL.outMMstruct),Private subroutine Not implemented ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.calc_precalcs(climsave.agicmodule.Data.ClusterCropData[]@;climsave.agicmodule.Data.ClustermetData[]@;climsave.agicmodule.Data.ClustersoilData[]@;System.Int32;System.Int32),Private subroutine ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.cropping(System.Int32;System.Single[]),Private function<scope>Private</scope> ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.grassing(System.Int32;System.Single[];System.Single;System.Single),Private function ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.printjoanoutput(System.String@;climsave.agicmodule.Data.basinscaleClusterData[];climsave.agicmodule.Data.ClusterCropData[];MetaGOTILWA_DLL.inpMMstruct;System.Int32;System.Int32;System.Int16@;System.String@),Private subroutine ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.forests(MetaGOTILWA_DLL.inpMMstruct@;MetaGOTILWA_DLL.outMMstruct@;climsave.agicmodule.Data.ScenarioData;System.String;climsave.agicmodule.Data.basinscaleClusterData[];System.Int32@;System.Boolean;System.String@),Private subroutine ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.forestNPVprofit(System.Int32;System.Single;System.Int32;System.Single;System.Single;System.Single;System.Single),Private function calcualted Forst Net Present value ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.interp(System.Single;System.Single;System.Single;System.Single;System.Single),Private function Interpolate ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.proportions(System.Single@;System.Single@;System.Single@;System.Single;System.Single;System.Single;System.Single;System.Single),Private Subroutine determines proportional land change ,,,,,,
+,climsave.agicmodule.Working.clsAgricModule.prop_more_cutoff(System.Object;System.Object;System.Object),Private function proportion cuttoffs ,,,,,,
+,climsave.agicmodule.Working.NamespaceDoc,This namespace contain the working interfaces for the META SFARMMOD dll ,,,,,,
+Data Class,climsave.agicmodule.Data.ClustermetData,A data class to contain Cluster met parameters ,,,cluster,1,,
+Data Class Variable,climsave.agicmodule.Data.ClusterData,A data class to contain the clusters soil cluster and met cluster ,,,cluster,1,Object: Cluster Data,Constructed with soils set to one
+Data Class Variable,climsave.agicmodule.Data.basinscaleClusterData.Crops,A data class to contain crop parameters and outcomes ,,00mm/ha,cluster,1,Object: CropData(MaxCrops;timestep),Constructed with soils set to one
+Data Class Variable,climsave.agicmodule.Data.ClusterData.Crops,A data class varaible to contain crop parameters and outcomes ,,,cluster,1,Object: CropData,Constructed with soils set to one
+Data Class Variable,climsave.agicmodule.Data.MapGridData.IAP2_Crops,A data class variable to contain crop grid input parameters and outcomes ,,,grid cell,1,CropData,
+Data Class Variable,climsave.agicmodule.Data.MapGridData.LandCover,A data class to describe 100% of a grid cells land cover: See object definition for details ,,10kha,grid cell,1,LandCoverData,
+Data Class Variable,climsave.agicmodule.Data.MapGridData.Nuts2s,A data class variable to describe the membership of a grid cell in the overlying NUTS2 regions ,see definition,,grid cell,c. 4,List(Of Nuts2Data),
+Data Class Variable,climsave.agicmodule.Data.MapGridData.Soils,A data class to describe a grid cells membership of soil type polygons (1 grid cell contains many soils): See object definition for details ,,,grid cell,c. 10 soils,List(of SoilData),
+Data Class Variable,climsave.agicmodule.Data.ScenarioData.Cropdata,A data class variable to hold sencario specific details ,,,Global,c. 15 Crops,CropDetails,
+Data Class Variable,climsave.agicmodule.Data.ClusterCropData.Crops,A data class to contain crop parameters and outcomes ,,,cluster,1,Object: CropData,Constructed with soils set to one
+Data Class variable,climsave.agicmodule.Data.MapGridData.RiverBasins,A data class variable to describe the membership of a grid cell in the overlying river basins. ,WGMM,,grid cell,1 ...most probably,RiverBasinData,
+INPUT,climsave.agicmodule.Data.LandCoverData.rIAM_PA_VARIABLES.cur_PA_Intensive,Proportion of area that is protected area and intensive agriculture (used for PA increase/decrease) Changed to be as value from 0-100 so that 10% = 10(for RIAM) ,PA-RIAM,% (0...100),grid cell,1,Single,Added 11/12/2015
+INPUT,climsave.agicmodule.Data.LandCoverData.rIAM_PA_VARIABLES.cur_PA_Extensive,Proportion of area that is protected area and extensive agriculture  (used for PA increase/decrease) Changed to be as value from 0-100 so that 10% = 10(for RIAM) ,PA-RIAM,% (0...100),grid cell,1,Single,Added 11/12/2015
+INPUT,climsave.agicmodule.Data.LandCoverData.rIAM_PA_VARIABLES.cur_PA_Scenario,Proportion of area that is protected area. Changed to be as value from 0-100 so that 10% = 10(for RIAM) ,PA-RIAM,% (0...100),grid cell,1,Single,Added 11/12/2015
+INPUT,climsave.agicmodule.Data.LandCoverData.rIAM_PA_VARIABLES.cur_PA_Urban,Proportion of area that is protected area and urban (used for PA increase/decrease) Changed to be as value from 0-100 so that 10% = 10(for RIAM) ,PA-RIAM,% (0...100),grid cell,1,Single,Added 11/12/2015
+INPUT,climsave.agicmodule.Data.LandCoverData.rIAM_PA_VARIABLES.cur_PA_Forest,Proportion of area that is protected area and forest (used for PA increase/decrease and Masking forest species) Changed to be as value from 0-100 so that 10% = 10(for RIAM) ,PA-RIAM,% (0...100),grid cell,1,Single,Added 11/12/2015
+INPUT,climsave.agicmodule.Data.NUTS2regiondata.NUTS2ID,A variable to store the ID key of the NUTS2 ,NUTS2 data file,ha,NUTS2,1,Integer,
+INPUT,climsave.agicmodule.Data.LandCoverData.rIAM_PA_VARIABLES.cur_PA_Abandoned,Proportion of area that is protected area and abandoned land (used for PA increase/decrease) Changed to be as value from 0-100 so that 10% = 10(for RIAM) ,PA-RIAM,% (0...100),grid cell,1,Single,Added 11/12/2015
+Input,climsave.agicmodule.Data.LandCoverData.InputOtherPerc,Percentage area of other land in grid cell in baseline ,Cluster database,% (0...100),grid cell,1,Single,From analysis of Corine (eg land which is rock; beach)
+Input,climsave.agicmodule.Data.LandCoverData.pre_Landusetype_IN,Percentage area of each land use type in grid cell in the previous time step:0=urban; 1=int arable; 2=int grass(dairy); 3=ext grass(beef); 4=mgd forest; 5=umgd forest; 6=Very ext grass(sheep/goat); 7=abnd ,Command Module,%,grid cell,1,Single(10),
+Input,climsave.agicmodule.Data.LandCoverData.rIAM_PA_Vars,rIAM PA variables object of type rIAM_PA_VARIABLES ,PA-Species,,,,rIAM_PA_VARIABLES,Added 11/12/2015
+Input,climsave.agicmodule.Data.basinscaleClusterData.pre_Forestspecieselfthinning_IN,optimum species for selfthinning in the previous period ,,,Cluster,1,Short,0...2
+Input,climsave.agicmodule.Data.ClusterData.Metid,Met Cluster ID ,Cluster database,Code value,Cluster,1,Integer,
+Input,climsave.agicmodule.Data.MapGridData.Nuts2Data.Id,The identification of a nuts2 region that intersects a grid sqaure ,Grid database,-,grid cell,c.4 NUTS2s eg AT11,String,-
+Input,climsave.agicmodule.Data.MapGridData.Nuts2Data.Perc,The percentage of the given grid residing in the said nuts2 region ,Grid database,% (0...100),grid cell,c.4 NUTS2s,Single,-
+Input,climsave.agicmodule.Data.ClusterData.Soilid,Soil Cluster ID ,Cluster database,Code value,Cluster,1,Integer,
+Input,climsave.agicmodule.Data.MapGridData.RiverBasinData.Id,The identification of Riverbasin region that intersects a grid sqaure ,WGMM database,-,grid cell,1 River basins,String,-
+Input,climsave.agicmodule.Data.basinscaleClusterData.pre_Landuse_IN,A A data class variable to store land use % by typein the previous period ,,% (0-1),Cluster,1,Single(9),
+Input,climsave.agicmodule.Data.MapGridData.SoilData.ClusterID,Thebasinclusternthat this soil in the grid cellbelongs to ,Cluster database,Index,Grid cell soil,c.10 soils,Single,
+Input,climsave.agicmodule.Data.MapGridData.SoilData.InputAreaPropn,Area of soil type in grid as input from soil file ,Soils per grid database,ha,Grid cell,c.10 soils,Single,
+Input,climsave.agicmodule.Data.MapGridData.SoilData.Type,[Does Not Exist] Soil code number - revised version of official codes ,Soil database,Code number,Grid cell,c. 10 soils,Int32,-
+Input,climsave.agicmodule.Data.basinscaleClusterData.NUTS2,A data class variable to store the NUTS2 region most associated with this cluster. Where a yiled cluster is split between NUTS and water basins they are divided into Basin clusters ,Cluster database,,Cluster,1,Single,
+Input,climsave.agicmodule.Data.ClustermetData.Altitude,altitude ,Met database,m,Soil/met cluster,1,Single,
+Input,climsave.agicmodule.Data.MapGridData.Area10kha,Terrestrial area of the grid (NOT total area of grid) ,Grid database,ha,grid cell,1,Single,
+Input,climsave.agicmodule.Data.ClustermetData.AnnualRain,Total Annual Rain; mm ,Met database,mm H2O,Soil/met cluster,,Single,
+Input,climsave.agicmodule.Data.MapGridData.Id,An integer value that uniquely identifies this grid cell ,Grid database,index,grid cell,1,Integer,
+Input,climsave.agicmodule.Data.MapGridData.Cluster_type,SPECIES Type 0...24 ,,,grid cell,as many as list,Integer(40),
+Input,climsave.agicmodule.Data.MapGridData.Cluster_soilcode,SPECIES Soil Code NOT USED ,,,grid cell,as many as list,Integer(40),
+Input,climsave.agicmodule.Data.MapGridData.Cluster_number,SPECIES Cluster numberin list ,,,grid cell,1,Integer(40),
+Input,climsave.agicmodule.Data.MapGridData.Cluster_area,SPECIES percent of Cluster of each type ,,,grid cell,1,Single(40),
+Input,climsave.agicmodule.Data.ClustermetData.AnnualTemp,Average Annual Temp ,Met database,deg C,Soil/met cluster,,Single,
+Input,climsave.agicmodule.Data.MapGridData.Lat,Latitude ,Grid database,Degrees,grid cell,1,Single,
+Input,climsave.agicmodule.Data.MapGridData.Lng,Longitude ,Grid database,Degrees,grid cell,1,Single,
+Input,climsave.agicmodule.Data.ClustermetData.Climate,metagotilwa climate 1-7 (eg continental) ,Metagotilwa database,,Soil/met cluster,,Short,
+Input,climsave.agicmodule.Data.ClustermetData.Days10,Days before temperature exceeds 10 degC ,Met database,Days,Soil/met cluster,,Single,
+Input,climsave.agicmodule.Data.ClustermetData.Days6,Days before temperature exceeds 6 degC ,Met database,Days,Soil/met cluster,,Single,
+Input,climsave.agicmodule.Data.MapGridData.Dunford_oldsoilcode,Soil code ,,,grid cell,as many as list,Long(40),
+Input,climsave.agicmodule.Data.ClustermetData.Frostdays,number of days before free of frost ,Met database,Days,Soil/met cluster,,Single,
+Input,climsave.agicmodule.Data.ClustermetData.Joan,Met variables requried by Gotilwa routine ,Met database,,Soil/met cluster,,Single(3;15),
+Input,climsave.agicmodule.Data.ClustermetData.Mirek,Met variables required by Mirek routine ,Met database,,Soil/met cluster,,Single(15),
+Input,climsave.agicmodule.Data.ClustermetData.Pets,Total PET summer ,Met database,mm H2O,Soil/met cluster,,Single,
+Input,climsave.agicmodule.Data.ClustermetData.Petw,Total PET winter ,Met database,mm H2O,Soil/met cluster,,Single,
+Input,climsave.agicmodule.Data.RiverBasinWater.BaseIrrigationUsed,Base irrigation from Basin_WAirr ,Baseline Data file,m3,River basin,1,Single,
+Input,climsave.agicmodule.Data.RiverBasinWater.BaseIrrigationVolume,Volume of water m3 available in the river basin for agricultural irrigation in baseline: wgmm_WAirr ,Baseline Data,m3,River basin,1,Single,
+Input,climsave.agicmodule.Data.RiverBasinWater.ID,River basin identifier: BasinID ,WGMM,index value,River basin,1,Integer,Irrigation volume available provided at a basin level; but irrigation used by agriculture can be passed back at grid or basin scale
+Input,climsave.agicmodule.Data.RiverBasinWater.IrrigationVolume,Volume of water m3 available in the river basin for agricultural irrigation: wgmm_WAirr ,WGMM,m3,River basin,1,Single,
+Input,climsave.agicmodule.Data.RiverBasinWater.NoGrids,Number of grids that belong in this basin ,WGMM,Count,River basin,1,Integer,
+Input,climsave.agicmodule.Data.RiverBasinWater.RealIrrigationUsed,Real volume of water Mm3 used per basin by agriculture. (data) ,Baseline Data file,Mm3,River basin,1,Single,
+Input,climsave.agicmodule.Data.ClustermetData.Rads,Total Radiation summer ,Met database,MJ/m2,Soil/met cluster,,Single,
+Input,climsave.agicmodule.Data.ScenarioData.inputs,Input section of scenario data ,IAP,,Entire area,,,
+Input,climsave.agicmodule.Data.ScenarioData.inputs.ArableConservationLandScalar,A policy driven variable representing % arable land farmers insentivized to remove from production for ecosytem services or to regulate production. Default = 3% ,Scenario; User,scalar,Entire region,1,Single,Was setaside but now comprisers various schemes that remove land from production 
+Input,climsave.agicmodule.Data.ScenarioData.inputs.BioEnergyCropDemand,Extra % increase in arable land devoted to bioenegry prodn relative to 2010. Default=0 ,Scenario; User,% not PJ,Entire region,1,Single,% increase in land area
+Input,climsave.agicmodule.Data.ScenarioData.inputs.CO2,CO2 level; default 350 ,Scenario; User,ppm,Global,1,Single,NB the value for the scenarios is not reported anywhere
+Input,climsave.agicmodule.Data.ScenarioData.inputs.EUImportfactor,A scalar representing absolute change in % EU agrarian imports; default=0 which represents current 25% ,Scenario; User,scalar,Entire region,1,Single,10% means imports change from 25 to 35
+Input,climsave.agicmodule.Data.ScenarioData.inputs.GDP,A scalar representing the relative increase in GDP to 2010 in real terms labourcost=GDP percapita. The current is 0; 100%=double ,Scenario; User,Scalar,Entire area,1,Single,%
+Input,climsave.agicmodule.Data.ScenarioData.inputs.Gotilwa,For the 8 climate of which only 1;4;6;7;8 existForest species (;0)  0-2 = Self/Even/Uneven; and management (;1) 0-5=PSylv; Phal;Ppin;Qilex;Qpub;Fsyl ,Scenario; User,PPM,Global,1,Single(8;2) ,
+Input,climsave.agicmodule.Data.ScenarioData.inputs.IrrigationCost,The cost of irrigation water; relative to current =1 ,Scenario; User,EUR/m3,Entire region,1,Single,NOT USED. Actually iterate price so water demand meets supply
+Input,climsave.agicmodule.Data.ScenarioData.inputs.IrrigationEfficiencyFactor,% increase in water efficiency relative to current. Default =0 ,Scenario; User,scalar,Entire region,1,Single,100% means 50mm of water achieves what 100mm does currently (50%=100/1.5)
+Input,climsave.agicmodule.Data.ScenarioData.inputs.IsImpact,Indicates if Impact screen run ,IAP version,Flag,,,Boolean,True if Impact screen
+Input,climsave.agicmodule.Data.ScenarioData.inputs.IsScotland,Indicates if Scotland run Deprecating as no Scotland in IAP2 ,IAP version,Flag,,,Boolean,True if Scotland - defines the met input files to use
+Input,climsave.agicmodule.Data.ScenarioData.inputs.Metecon,Met data economy 1;2;3;4 = A1; A2; B1; B2. For Scotland 1-3 representing lo;med;hi in Annual Temperature (10;50;90). Deprecating with change of weather model ,Scenario; User,Code,Global,1,Short,Defines the input file to use with Metyear and Metsens
+Input,climsave.agicmodule.Data.ScenarioData.inputs.MetGCM_RCM,"IAP2 Global Climate Model Regional Climate Model 0=""HadGEM2-ES_RCA4""; 1=""MPI-ESM-LR_CCLM4""; 2= ""GFDL-ESM2M_RCA4""; 3=""CanESM2_CanRCM4"";4=""IPSL-CM5A-MR_WRF""; 5 = ""CanESM2_CanRCM4""; 6 = EC-EARTH_RCA4""; 7 =""NorESM1-M_RCA4"" ",Scenario; User,Code,Global,1,Short, Not all RCP Climate models are defined in which case it will default back to the baseline met clusters
+Input,climsave.agicmodule.Data.ScenarioData.inputs.MetRCP,IAP2 Representative Climate Pathway 0=4.5; 1=8.5; 2=2.6 ,Scenario; User,Code,Global,1,Short,
+Input,climsave.agicmodule.Data.ScenarioData.inputs.Metmodel,"Met data model IAP1 represeting ""GFCM21""; ""CSMK3""; ""HADGEM""; ""IPCM4""; ""MPEH5"" respectively. For Scotland 1-3 represeting lo;med;hi in Winter Precip (10;50;90) ",Scenario; User,Code,Global,1,Short,Defines the input file to use with Metecon and Metsens
+Input,climsave.agicmodule.Data.ScenarioData.inputs.Metsens,Met data sensitivity in IAP1 1;2;3 = hi; mi; lo (only mi available for EU). For Scotland 1-3 representing lo;med;hi Emission scenario. Deprecating with change of weather model ,Scenario; User,Code,Global,1,Short,Defines the input file to use with Metecon and Metyear. -1 indicates Baseline climate AND scenario for EA use only. For baseline climate set to 0 as undefined
+Input,climsave.agicmodule.Data.ScenarioData.inputs.MetUKCIP,Not used  for EU. For Scotland 1-3 represeting lo;med;hi in Summer Precip (10;50;90) ,Scenario; User,Code,Global,1,Short,Defines the input file to use with Metecon and Metsens
+Input,climsave.agicmodule.Data.ScenarioData.inputs.Metyear,IAP2 Met data year 0 =2010 ;1 = 2010-2040;2 =2041-2070; 3 = 2071-2100. repurposed between IAP1 and IAP2 ,Scenario; User,Code,Global,1,Short,Defines the input file to use with Metecon and Metsens
+Input,climsave.agicmodule.Data.ScenarioData.inputs.NonRuminantLivestckProductsDemand,A variable to capture policy pressure to reduce white meat: % increase in consumption Default =0 ,Scenario; User,Mt,Entire region,1,Single,Expected to be a negative value (actually production)
+Input,climsave.agicmodule.Data.ScenarioData.inputs.Oilprice,A scalar representing the future relative change in oilprice=real costs compared to 2010 terms; default is 0 = no change; 100%=doubles ,Scenario; User,Scalar,Entire area,1,Single,%
+Input,climsave.agicmodule.Data.ScenarioData.inputs.Population,A scalar % increase in population relative to 2010. The default is 0% ,Scenario; User,Scalar,Entire area,1,Single,
+Input,climsave.agicmodule.Data.ScenarioData.inputs.Reduce_diffuse,A scalar representing factor for reducing diffuse source pollution - reduces N input (2=half N input) ,Scenario; User,Scalar,Entire area,n/a,Single,One value over all crops
+Input,climsave.agicmodule.Data.ScenarioData.inputs.RuminantLivestkProductsDemand,A variable to capture policy pressure to reduce ruminant meat: % increase in consumption. Default =0 ,Scenario; User,Mt,Entire region,1,Single,NB Converts to white meat. Expected to be a negative value (actually production)
+Input,climsave.agicmodule.Data.ScenarioData.inputs.SprecSlider,% (0-100) increase in summer precipitation over defualt for scenario ,Scenario; User,%,Global,1,Double,Can be +ve or -ve
+Input,climsave.agicmodule.Data.ScenarioData.inputs.Techfac,A scalar representing the future % increase in technological effectiveness (labour used) compared to 2010 terms. Default =0 ,Scenario; User,Scalar,Entire area,1,Single,
+Input,climsave.agicmodule.Data.ScenarioData.inputs.Tempslider,% (0...100) increase in annual temperature over default for scenario ,Scenario; User,C,Global,degC,Short,can be -ve or +ve}
+Input,climsave.agicmodule.Data.ScenarioData.inputs.Timber_price,NOT USED A scalar representing % change from current in timber price. The current is 0; 100%=double ,Scenario; User,%,Entire area,1,Single,%
+Input,climsave.agicmodule.Data.ScenarioData.inputs.WprecSlider,% (0...100) increase in winter precipitation over default for scenario ,Scenario; User,%,Global,1,Single,Can be +ve or -ve
+Input,climsave.agicmodule.Data.ScenarioData.inputs.Yieldfac,A scalar representing % increase in yields; due to plant breeding and agronomy; relative to 2010. The default =0 ,Scenario; User,Scalar,Entire area,n/a,Single,One value over all crops
+Input,climsave.agicmodule.Data.ClustermetData.Radw,Total Radiation winter ,Met database,MJ/m2,Soil/met cluster,,Single,
+Input,climsave.agicmodule.Data.ScenarioData.CropDetails.CCroppingRequiredMt,The total Mt of production per crop type (6) in baseline. {Is this right} ,Baseline Data,Mt,Entire area,7 croptypes+timber,Single(Croptype),
+Input,climsave.agicmodule.Data.ClustermetData.SummerRain,Total Rain summer; mm ,Met database,mm,Soil/met cluster,,Single,
+Input,climsave.agicmodule.Data.ClustermetData.SummerTemp,Average Summer Temp; degC ,Met database,deg C,Soil/met cluster,,Single,
+Input,climsave.agicmodule.Data.ClustermetData.TempW,Average Winter Temp; deg C ,Met database,deg C,Soil/met cluster,,Single,
+Input,climsave.agicmodule.Data.ClustermetData.WinRain,Total Rain winter; mm ,Met database,mm,Soil/met cluster,,Single,
+Input,climsave.agicmodule.Data.basinscaleClusterData.Region,"A data class variable to store regional NUTS2 variables (base yield; Labour; input cost;	Output cost) ",NUTS2 database,,Cluster,1,Single(15),
+Input,climsave.agicmodule.Data.basinscaleClusterData.Scales,A data class variable to store the crops scaling values(note only 11 are read in)101 103 107 115 116 110 124 125 126 130 361 -15 ,NUTS2 database,,Cluster,1,Single(15),
+Input,climsave.agicmodule.Data.ClustersoilData.Area,area of this soil; kha ,Cluster database,kha,cluster,,Single,
+Input,climsave.agicmodule.Data.ClustersoilData.AWC1,% of AWC available in first suction ,Soil database,%,cluster,,Single,
+Input,climsave.agicmodule.Data.ClustersoilData.AWC2,% of AWC available in second suction ,Soil database,%,cluster,,Single,
+Input,climsave.agicmodule.Data.ClustersoilData.AWC3,% of AWC available in third suction ,Soil database,%,cluster,,Single,
+Input,climsave.agicmodule.Data.ClustersoilData.AWC4,% of AWC available in last suction ,Soil database,%,cluster,,Single,
+Input,climsave.agicmodule.Data.ClustersoilData.AWCtotm,AWC; mm available in soil (calculated) ,Soil database,mm/mm soil,cluster,,Single,
+Input,climsave.agicmodule.Data.ClustersoilData.Clay,%clay ,Soil database,%,cluster,,Single,
+Input,climsave.agicmodule.Data.ClustersoilData.Depth,soil depth; mm ,Soil database,mm,cluster,,Single,
+Input,climsave.agicmodule.Data.ClustersoilData.EffVol,Effective violume after deducting stoneiness ,Soil database,% scalar,cluster,n/a,Single,GOTILWA value; due to stoniness 20% stones = 80% soil
+Input,climsave.agicmodule.Data.ClustersoilData.Ks,infiltration rate ,Soil database,,cluster,,Single,
+Input,climsave.agicmodule.Data.ClustersoilData.OM,organic matter content ,Soil database,mm/mm,cluster,n/a,single,
+Input,climsave.agicmodule.Data.ClustersoilData.Sand,%sand ,Soil database,%,cluster,,Single,
+Input,climsave.agicmodule.Data.ClustersoilData.Silt,%silt ,Soil database,%,cluster,,Single,
+Input,climsave.agicmodule.Data.ClustersoilData.TextureCode,Soil texture code (SWFM 1-9) ,Soil database,Code value,cluster,,Single,
+Input,climsave.agicmodule.Data.ClustersoilData.UnderlyingRockType,PHASE value from the soi database (NOT USED) ,Soil database,code value,cluster,n/a,Integer,tends to be meaningless since averaged over clustered soils
+Input,climsave.agicmodule.Data.ClustersoilData.WiltMc,Wilting mc ,Soil database,mc at wilting point; mm/mm,cluster,n/a,Single,
+Input,climsave.agicmodule.Data.basinscaleClusterData.YieldID,A variable to store the yieldgrid of the scale cluster ,Cluster database,scalar,Cluster,1,Integer,
+Input,climsave.agicmodule.Data.basinscaleClusterData.ClusterID,A variable to store the ID key of the cluster ,Cluster database,Code value,Cluster,1,Integer,
+Input,climsave.agicmodule.Data.basinscaleClusterData.BasinID,A variable to store the basin of the cluster ,Cluster database,Code value,Cluster,1,Integer,
+Input,climsave.agicmodule.Data.CropData.pre_ArableCrops_IN,Previous cropping ,Command Module,,,,ByCrop(MaxCrops),
+Input,climsave.agicmodule.Data.ClusterCropData.ClusterID,A variable to store the ID key of the cluster ,Cluster database,ha,Cluster,1,Integer,
+Input,climsave.agicmodule.Data.basinscaleClusterData.pre_Forestmgmt_IN,optimum mgmt in the previous period ,,,Cluster,1,Short,0...2
+Input,climsave.agicmodule.Data.ClusterCropData.Metid,A data class variable to store climate variables on the cluster scale ,Cluster database,,Cluster,1,MapGridData.Climate,
+Input,climsave.agicmodule.Data.ClusterCropData.N1,A variable to store first basinscale cluster for this cluster ,Cluster database,ha,Cluster,1,Integer,
+Input,climsave.agicmodule.Data.ClusterCropData.N2,A variable to store last basinscale cluster ,Cluster database,ha,Cluster,1,Integer,
+Input,climsave.agicmodule.Data.ClusterCropData.Precalc,A data class variable to store precalc variables (Nleach; DJhrs; NFhrs;Effrain;BasinID;5 spare ,Cluster database,,Cluster,1,MapGridData.Climate,
+Input,climsave.agicmodule.Data.ClusterCropData.Soilid,A variable to store the soil type cluster index of the cluster ,Cluster database,ha,Cluster,1,integer,
+Input,climsave.agicmodule.Data.basinscaleClusterData.ForestNPPselfthinning,Self thinning NPP for opt species ,,t/ha,Cluster,1,Short,0..2
+Input,climsave.agicmodule.Data.basinscaleClusterData.pre_Forestspecies_IN,optimum forest species in the previous period ,,,Cluster,1,Short,1...5
+Input,climsave.agicmodule.Data.LandCoverData.base_PA_UIEFN,IAP2 percentage area of land that is protected as habitat in grid cell of types Urb;Int;Ext;Forest;Other ,SPECIES PA,% (0...100),grid cell,1,Single(10),
+Input,climsave.agicmodule.Data.LandCoverData.cur_Flood_new,Percentage of a grid cell lost to all use due to flooding risk (current) ,FLOOD,%,grid cell,1,Single,
+Input,climsave.agicmodule.Data.LandCoverData.Flood_base,Percentage of a grid cell lost to all use due to flooding risk (baseline) ,FLOOD,%,grid cell,1,Single,
+Input,climsave.agicmodule.Data.LandCoverData.cur_Floodgrass_new,Percentage of a grid cell restricted to flood meadow grassland due to flooding risk (current) ,FLOOD,%,grid cell,1,Single,
+Input,climsave.agicmodule.Data.LandCoverData.Floodgrass_base,Percentage of a grid cell restricted to flood meadow grassland due to flooding risk (baseline) ,FLOOD,%,grid cell,1,Single,
+Input ,climsave.agicmodule.Data.LandCoverData.cur_PA_UIEFN_IN,IAP2 percentage area of land that is protected as habitat in grid cell of types Urb;Int;Ext;Forest;Other ,SPECIES PA,% (0...100),grid cell,1,Single(10),
+Internal,climsave.agicmodule.Data.basinscaleClusterData.Totalirrig,calculated Mm^3 irrigation per cluster ,,Mm^3,Cluster,,Single,Note to self: A question of the units used
+Internal,climsave.agicmodule.Data.basinscaleClusterData.Cprofit,Annual profit per cluster0=U;1=IA;2=ID;3=E;4=MF;5=UF;6=VE;7=N;8=Other ,,€/ha,,,Single,
+Internal,climsave.agicmodule.Data.basinscaleClusterData.Crop_irrig,The amount of irrigation for a crop -15 ,,mm,cluster,1,Single,
+Internal,climsave.agicmodule.Data.MapGridData.SoilData.AgricSoilPropn,The cultivateable area of said soil ,,ha,Grid cell,c.10 soils,Single,
+Internal,climsave.agicmodule.Data.MapGridData.SoilData.AreaPropn,Area of soil type in grid after deductions such as urban and flood ,,ha,Grid cell,c.10 soils,Single,
+Internal,climsave.agicmodule.CropData.CroppingRequiredMt,Total tonnage of cropping required in scenario ,Calcualted,Mt,Entire region,7 crop types,Single,Derived from Scenario data
+Internal,climsave.agicmodule.CropData.TotalProdnMt,Total actual prodn to match ,,Mt,Entire region,7 croptypes,Single(croptypes),
+Internal,climsave.agicmodule.CropData.GJ_per_t,Total GJ/unit prodn ,Local Database,GJ/Mt,Entire region,7 croptypes,Single(crops),
+Internal,climsave.agicmodule.CropData.cropinputs,Total 'baseline' crop inputs (variable costs) ,Local database,EUR/ha,Entire region,c 15 crops,Single(crops),essentially based on UK data as an average for base yield
+Internal,climsave.agicmodule.CropData.baseyield,Total 'baseline' yield of crops ,Local database,t [at traded dry matter]/ha,Entire region,c. 15 crops,Single(crops),
+Internal,climsave.agicmodule.CropData.cropprice,Total 'baseline' crop price per crop ,Local database,EUR/t [at traded dry matter],Entire region,c. 15 crops,Single(crops),crop price is very time specific and even time-averages are currently high
+Internal,climsave.agicmodule.CropData.basesowdate,Total 'baseline' sowing date Jan 1st=1 ,Local database,days,Entire region,c. 15 crops,Single(crops),
+Internal,climsave.agicmodule.CropData.labourinputs,Total 'baseline' labour demands ,Local database,EUR/typical ha,Entire region,c. 15 crops,Single(crops),
+Internal,climsave.agicmodule.CropData.fertinputs,Total 'baseline' fert inputs (€/ha) ,Local database,EUR/typical ha,Entire region,c. 15 crops,Single(crops),
+Internal,climsave.agicmodule.CropData.Nfert,baseline Nfert rate ; kgN/ha ,Local database,kg N/ha,Entire region,c. 15 crops,Single(crops),
+Internal,climsave.agicmodule.CropData.irrig,irrigation rate at baseline; mm/ha ,Local database,mm/ha,Entire region,c. 15 crops,Single(crops),
+Internal,climsave.agicmodule.CropData.subsidy,'baseline' subsidy rate (€/t baseyield) ,Local database,EUR/typical ha,Entire region,c. 15 crops,Single(crops),
+Internal,climsave.agicmodule.CropData.pest,pesticide per t prodn ,Local database,EUR/typical ha,Entire region,c. 15 crops,Single(crops),
+Internal,climsave.agicmodule.CropData.mirek,Code number of mirek crop used; negative means crop not simulated an is number Mirek crop used for this crop ,Local database,Code number,Entire region,c. 15 crops,Single(crops),
+Internal,climsave.agicmodule.CropData.prodtype,type of production: cereal; oil; carbohydrate; textile; milk ,Local database,EUR/typical ha,Entire region,c. 15 crops,integer(crops),
+Internal,climsave.agicmodule.CropData.baseGM,Total 'baseline' crop gross margin ,Local database,EUR/ha,Entire region,c. 15 crops,Single(crops),
+Internal,climsave.agicmodule.CropData.woodprice,wood prices ,Local database,EUR/t,Entire region,,Single(crops),
+Internal,climsave.agicmodule.CropData.woodharvestcost,cost of forest harvest ,Local database,EUR/ha,Entire region,,Single(crops),
+Internal,climsave.agicmodule.CropData.basewaterprice,base water price ,Local database,EUR/m3,Entire region,,Single(crops),
+Internal,climsave.agicmodule.Data.basinscaleClusterData.BioEnergy,Energy sequestered in the form of energy crops per crop per grid ,,PJ,cluster,15 crops,Single,Gross or net calorific value or realisable energy?
+Internal,climsave.agicmodule.Working.clsAgricModule.localCropData,An internal data class variable to carry local crop specific data: See object ,see definition,,,,Object: InternalCropData,currently hard coded but ultimately a call to a 'locally managed' datastore on the server
+Internal,climsave.agicmodule.Working.clsAgricModule.localData, ,,,,,,
+Internal,climsave.agicmodule.Data.MapGridData.SoilData.Fsp,This soil is forced by PA to become forest species fsp ,,,Grid cell soil,1,Short,
+Internal,climsave.agicmodule.Data.basinscaleClusterData.ForestYLDprofit,Profit from YLD by species and management ,,t/ha,Cluster,1,Single(6;2),
+Internal,climsave.agicmodule.Data.MapGridData.SoilData.Prop_remaining1,The proportion of the soil used (not transferred to a PA) ,,1,Grid cell soil,c.10 soils,Single,
+Internal,climsave.agicmodule.Data.MapGridData.SoilData.Switch_use1,That this soil is forced by PA to become 5;4;3;2;1;to 7; 3;2;1 to 5 and 2;1 to 3 (IEFN = 1;2;3;4) ,,00ha,Grid cell soil,10 change pairs,Single,
+Internal,climsave.agicmodule.Data.basinscaleClusterData.EnergyAsFood,Energy sequestered in the form of food produced per crop per grid ,,PJ,grid cell/cluster,c. 15 crops,Single,
+Internal,climsave.agicmodule.Data.ClusterCropData.ForestYLD,Yield by species and management ,,t/ha,cluster/grid,1,Single,
+Internal,climsave.agicmodule.Data.basinscaleClusterData.Milkpercluster,Milk produced per cluster; klitre/ha -8;9 ,,k litres/ha,Cluster,1,Single,
+Internal,climsave.agicmodule.Data.basinscaleClusterData.LUmilkpercluster,LU_cows produced per cluster; klitre/ha -8;9 ,,LU/ha,Cluster,1,Single,
+Internal,climsave.agicmodule.Data.basinscaleClusterData.LUextpercluster,LU_extensive produced per cluster;  -8;9 ,,LU/ha,Cluster,1,Single,
+Internal,climsave.agicmodule.Data.basinscaleClusterData.NitrateC,Annual nitrate leaching per crop per cluster ,,kg [N],Cluster,,Single,
+Internal,climsave.agicmodule.Data.LandCoverData.NotAgricArea,NOT USED ,,% (0...100),grid cell,1,Single,
+Internal,climsave.agicmodule.Data.basinscaleClusterData.FertNuseC,Annual fertiliser nitrogen consmption per cluster ,,kg [N],cluster,15 crops,Single,
+Internal,climsave.agicmodule.Data.basinscaleClusterData.PesticideUsedC,Annual pesticide use per cluster ,,total dose,Cluster,15 crops,Single,
+Internal,climsave.agicmodule.Data.basinscaleClusterData.FloodArea,A variable to store the area of the cluster restricted grassland due to flooding -15 ,,ha,Cluster,1,Single,NOT USED
+Internal,climsave.agicmodule.Data.basinscaleClusterData.AgricArea,A variable to store the available agricultural area of the cluster; 0kha ,,ha,Cluster,1,Single,
+Internal,climsave.agicmodule.Data.basinscaleClusterData.StubbleAreaC,Annual stubblearea potentially available (late sown spring crops) per cluster ,,ha,Cluster,1,Single,
+Internal/ Output,climsave.agicmodule.Data.CropData.ByCrop.irrig,weighted irrigation of crop per grid cell ,,00mm/ha,grid cell/cluster,18 crops,Single,
+Internal/ Output,climsave.agicmodule.Data.CropData.ByCrop.Area,area of crop for a cluster or a grid at a timestep timestep ,,%,grid cell/ cluster,18 crops,single,
+Internal/ Output,climsave.agicmodule.Data.CropData.ByCrop.yield,Yield of crop per cluster or grid cell; for forest managed is wood yield; unmanaged is NPP ,,t/ha,grid cell/cluster,18 crops,Single,
+Output,climsave.agicmodule.Data.MapGridData.Milk,Milk produced; 10Mlitre ,,10Mlitre,grid cell,1,Single,Note to self query units
+Output,climsave.agicmodule.Data.MapGridData.LU_milk,LU_milk ,,LU,grid cell,1,Single,Note to self query units
+Output,climsave.agicmodule.Data.MapGridData.LU_ext,LU_extensive ,,LU,grid cell,1,Single,
+Output,climsave.agicmodule.Data.LandCoverData.ArablecropPerc,% of area in an arable crop including forage maize ,SPECIES,%,grid,,Single,EA new 17/11/2015
+Output,climsave.agicmodule.Data.ScenarioData.CropDetails.TotalProdn,The total Mt of production per crop type over the entire area. ,,Mt,Entire area,Cereal;Oilseed;Potato;Soya;Cotton;Milk kMlitre;MLU;GJ/capita,Single(Croptype),
+Output,climsave.agicmodule.Data.LandCoverData.cur_Tot_Intensive,Adds up intensive arable and intensive grassland = cur_Landusetype_OUT(1) + cur_Landusetype_OUT(2) ,,% (0...100),Grid cell,1,Single,Added 11/12/2015
+Output,climsave.agicmodule.Data.LandCoverData.cur_Tot_Extensive,Adds up extensive sheep and beef with very extensive sheep and beef grasslands = cur_Landusetype_OUT(3) + cur_Landusetype_OUT(6) ,,% (0...100),Grid cell,1,Single,Added 11/12/2015
+Output,climsave.agicmodule.Data.MapGridData.Timber_produced,Timber produced ,,Mt,grid cell,1,Single,
+Output,climsave.agicmodule.Data.MapGridData.Species_EVN,type 1-7 % of grid as EVN from Dunford_Longlist_3. 0-7 are the binary numbers of Rob's table.  Add 0 for pH less than 5; 8 for pH middle and 16 for pH greater than 6.5 ,,% grid,grid cell,1,Single(24),Extended to 24 EA 7/1/2016
+Output,climsave.agicmodule.Data.LandCoverData.cur_Tot_Forest,Adds up managed and unmanaged forest = cur_Landusetype_OUT(4) + cur_Landusetype_OUT(5) ,,% (0...100),Grid cell,1,Single,Added 11/12/2015
+Output,climsave.agicmodule.Data.MapGridData.SpeciesVars_IAP2,New variables for Species. Data class see definition ,,,grid cell,1,IAP2_Species_Variables,Placeholder implementation
+Output,climsave.agicmodule.Data.MapGridData.ArableArea10kHa,Added 21/11/2015 Calculates arable area from LandCover.ArablecropPerc and Area10kha ,Command Module,10;000 ha,,,Single,
+Output,climsave.agicmodule.Data.LandCoverData.cur_Tot_NonAgric,Returns abandoned area. Flood area is included. Urban area is not  = cur_Landusetype_OUT(7) ,,% (0...100),Grid cell,1,Single,Added 11/12/2015
+Output,climsave.agicmodule.Data.LandCoverData.Change_AgricAreaPerc,Percentage area of grid cell which is changed to agric (Int+Ext-baseInt/Ext) (-ve if from) ,User,%,grid cell,1,Single,Value of land is graded intensive; extensive; forests; abandoned - may be wrong side of boundary
+Output,climsave.agicmodule.Data.LandCoverData.Change_Forest_to_AgricAreaPerc,Percentage area of grid cell which is changed from forest to agric (minimum of Int+Ext-baseInt/Ext and forest change) (-ve if from) ,User,%,grid cell,1,Single,
+Output,climsave.agicmodule.Data.NUTS2regiondata.Crops,A data class to contain NUTS2 crop parameters and outcomes ,User,,NUTS2,1,Object: CropData,See elements
+Output,climsave.agicmodule.Data.NUTS2regiondata.NUTS2Area,A calculated variable to store the available agricultural area of the NUTS2 ,User,ha,NUTS2,1,Single,Note to self: check this is not confused with total NUTS2 Area
+Output,climsave.agicmodule.Data.LandCoverData.FertiliserUsed,Fertilsier used in grid cell ,SPECIES,kgN/ha,grid cell,1,Single,Related to yield of crops in the scenarios. Note problem that we do not have a Nfixing crop simulated
+Output,climsave.agicmodule.Data.basinscaleClusterData.ArablecropPercC,% of area in an arable crop including forage maize ,?????,%,grid,,Single,New variable EA 17/11/2015
+Output,climsave.agicmodule.Data.basinscaleClusterData.cur_Forestspecieselfthinning_OUT,optimum species for selfthinning ,,,Cluster,1,Short,0...2
+Output,climsave.agicmodule.Data.basinscaleClusterData.cur_Forestmgmt_OUT,optimum mgmt -9 ,,,Cluster,1,Short,0...2
+Output,climsave.agicmodule.Data.RiverBasinWater.BasinIrrigationUsed,Aggregated volume of water Mm3 used per basin by agriculture. Sum of each member grid square ,User,Mm3,River basin,1,Single,
+Output,climsave.agicmodule.Data.RiverBasinWater.Basinwaterprice_increase,Price of water % of baseline ,User,%,River basin,1,Single,
+Output,climsave.agicmodule.Data.RiverBasinWater.Basinwaterprice,Price of water £/ha.mm (which limits use of supply) ,User,£/ha.mm,River basin,1,Single,
+Output,climsave.agicmodule.Data.MapGridData.RiverBasinData.IrrigationUsed,The amount of irrigation used within the grid ,,Mm3,grid cell,1,Single,
+Output,climsave.agicmodule.Data.basinscaleClusterData.cur_Forestspecies_OUT,optimum forest species ,,,Cluster,1,short ,1...5
+Output,climsave.agicmodule.Data.LandCoverData.ForestMgmt,Management for each species of forest in the grid (assumed to be same for all grid!) ,User,,grid cell,1 spare,Short(9),
+Output,climsave.agicmodule.Data.LandCoverData.Forestprofit,profit for each species of forest in the grid (weighted average) ,User,€/ha,grid cell,1,Single(9),
+Output,climsave.agicmodule.Data.LandCoverData.Forestspecies,Percentage area of grid which is each species ,User,%,grid cell,1,Single(9),
+Output,climsave.agicmodule.Data.ScenarioData.outputs,The output section of scenario data {iteration used to determine crop price to meet demand} ,,Scalar,Entire area,6 croptypes,Single(Croptype),Iteration used to determine crop price to meet demand
+Output,climsave.agicmodule.Data.ScenarioData.outputs.AgricLandChange,Percent change in land used for agric ,User,%,Entire area,,Single,
+Output,climsave.agicmodule.Data.ScenarioData.outputs.Basinirrigationused,actual basin irriagtionused not value sent to Florian ,,Scalar,basin,one per basin,Single(basin),
+Output,climsave.agicmodule.Data.ScenarioData.outputs.Food_per_capita,Food consumption per head,,,Entire area,1,Single,
+Output,climsave.agicmodule.Data.ScenarioData.outputs.Forest_to_AgricLandChange,Percent change in land used from forest to agric ,,%,Entire area,,Single,
+Output,climsave.agicmodule.Data.ScenarioData.outputs.NPP_Forest_EU,EU NPP (net primary productivity) Forest averaged over all EU where forest ,,000t,Entire area,,Single,
+Output,climsave.agicmodule.Data.ScenarioData.outputs.Pricefac,A scalar representing relative change in crop prices; due to productivity gains; affluence; scarcity etc; in realterms compared to 2010. The default is 1 = no change ,,Scalar,Entire area,6 commodity types,Single(Croptype),Iteration used to determine crop price to meet demand
+Output,climsave.agicmodule.Data.ScenarioData.outputs.ReqdProduction,Percent of reqd production achieved ,User,%,Entire area,,Single,
+Output,climsave.agicmodule.Data.ScenarioData.outputs.Timber,EU timber prodn;MT ,User,Mt,Entire area,,Single,
+Output,climsave.agicmodule.Data.ScenarioData.outputs.Waterpricefac,A scalar representing relative change in water prices compared to 2010. The default is 1 = no change ,,Scalar,basin,one per basin,Single(Croptype),Iteration used to determine water price to meet available
+Output,climsave.agicmodule.Data.LandCoverData.Actual_PA_UIEFN,IAP2 revised percentage area of land that is protected as habitat of types Urb;Int;Ext;Forest;Other (0-4) and OF;OE;OI;FE;FI;EI (5-10) and N_notPA; F_notPA; E_notPA (11-13) ,SPECIES PA,% (0...100),grid cell,1,Single(18),
+Output,climsave.agicmodule.Data.LandCoverData.cur_Landusetype_OUT,Percentage area of each land use type in grid cell:0=urban; 1=int arable; 2=int grass(dairy); 3=ext grass(beef); 4=mgd forest; 5=umgd forest; 6=Very ext grass(sheep/goat); 7=abnd ,SPECIES/USER,%,grid cell,1,Single(10),
+Output,climsave.agicmodule.Data.basinscaleClusterData.cur_Landuse_OUT,A data class variable to store land use % by type ,,% (0-1),Cluster,1,Single(9),
+Output,climsave.agicmodule.Data.LandCoverData.Naturalness_m,Naturalness as £ value. 30*int+90*ext;MgdF+200*UnmF;Unused ,,£m,grid,,Single,
+Output,climsave.agicmodule.Data.LandCoverData.Naturalness1,Naturalness (1-int-urban) ,SPECIES,%,grid,,Single,
+Output,climsave.agicmodule.Data.LandCoverData.Nitrate,Nitrate leaching in grid cell ,SPECIES/User,kgN or kgN/ha,grid cell,1,Single,
+Output,climsave.agicmodule.Data.MapGridData.IAP2_Species_Variables.UseSoilFile,To Species: Set to 0 if SFARMOD is passing the data or 1 if it is to be read in from a file. Implemented as 1 for IAP2 ,Species,Flag,grid cell,1,Single,
+Output,climsave.agicmodule.Data.MapGridData.IAP2_Species_Variables.soil_potential_marsh,To Species; IAP2; NEW; soil_potential_marsh; the % of the grid where the soil is appropriate for this habitat; SFARMOD; % [0..100] NOT AS [0..1]; 10' grid N/A ,Species,%,grid cell,1,Single,
+Output,climsave.agicmodule.Data.MapGridData.IAP2_Species_Variables.soil_potential_bog,To Species; IAP2; NEW; soil_potential_bog; the % of the grid where the soil is appropriate for this habitat. SFARMOD; %  [0..100] NOT AS [0..1]; 10' grid; N/A ,Species,%,grid cell,1,Single,
+Output,climsave.agicmodule.Data.MapGridData.IAP2_Species_Variables.soil_potential_heath,To Species; IAP2; NEW; soil_potential_heath; the % of the grid where the soil is appropriate for this habitat. SFARMOD; %  [0..100] NOT AS [0..1]; 10' grid; N/A ,Species,%,grid cell,1,Single,
+Output,climsave.agicmodule.Data.MapGridData.IAP2_Species_Variables.soil_potential_acidG,"To Species: IAP2; NEW; soil_potential_acidG	the % of the grid where the soil is appropriate for this habitat. SFARMOD; %  [0..100] NOT AS [0..1]; 10' grid; N/A ",Species,%,grid cell,1,Single,
+Output,climsave.agicmodule.Data.MapGridData.IAP2_Species_Variables.soil_potential_neutralG,To Species: IAP2; NEW; soil_potential_neutralG; the % of the grid where the soil is appropriate for this habitat. SFARMOD; %  [0..100] NOT AS [0..1]; 10' grid N/A ,Species,%,grid cell,1,Single,
+Output,climsave.agicmodule.Data.MapGridData.IAP2_Species_Variables.soil_potential_calcG,To Species: IAP2; NEW; soil_potential_calcG; the % of the grid where the soil is appropriate for this habitat. SFARMOD; %  [0..100] NOT AS [0..1]; 10' grid; N/A ,Species,%,grid cell,1,Single,
+Output,climsave.agicmodule.Data.CropData.cur_ArableCrops_OUT,Current cropping ,,,,,ByCrop(MaxCrops),
+Output,climsave.agicmodule.Data.LandCoverData.NPP_Forest_grid,sum of NPP forest where forest is grown ,,000t,grid cell,1,Single,
+Output,climsave.agicmodule.Data.MapGridData.Diversity,Diversity Shannon ,,,grid cell,1,Single,
+Output,climsave.agicmodule.Data.MapGridData.Fibre_produced,Cotton (fibre) produced ,,t,grid cell,1,Single,
+Output,climsave.agicmodule.Data.MapGridData.Food_produced,Food produced; TJ ,,TJ,grid cell,1,Single,
+Output,climsave.agicmodule.Data.LandCoverData.OptForestMgmt,management for optforestspecies in the grid ,,,grid cell,1,Single,
+Output,climsave.agicmodule.Data.LandCoverData.OptForestprofit,profit for optforestspecies in the grid ,,€/ha,grid cell,1,Single,
+Output,climsave.agicmodule.Data.LandCoverData.OptForestSpecies,Species which covers most of grid ,,,grid cell,1,Short,
+Output,climsave.agicmodule.Data.LandCoverData.PesticideUsed,Pesticide used in grid cell ,SPECIES/User,dose/ha,grid cell,1,Single,Is basically another measure of arable cropping; weighted because some crops use more
+Output,climsave.agicmodule.Data.LandCoverData.Profit,profit per grid cell ,,€/ha,grid cell,1,Single,
+Output,climsave.agicmodule.Data.LandCoverData.Stubblearea,Stubblearea in grid cell ,SPECIES,% of grid,grid cell,1,Single,Related to area of late sown spring crops. Note problem that we do not a mechanism to penalise not ploughing until spring
+Output,climsave.agicmodule.Data.LandCoverData.LPJ_GUESS_LandType,A property to return values for LPJ Guess landtype array ,,%(0...100),Grid cell,1,Int16(3),0=Forestry;1=Intensive farming; 2= extensive grassland; 3= abandoned EA new 17/11/2015
+Output,climsave.agicmodule.Data.LandCoverData.SPECIES_Forestry,A property to get forestry percent as integer for SPECIES Module = CInt(cur_Landusetype_OUT(4) + cur_Landusetype_OUT(5)) ,,% (0...100),Grid cell,1,Int16,EA new 17/11/2015
+Output,climsave.agicmodule.Data.LandCoverData.SPECIES_ArableCrops,A property to get intensive arable percent as integer for SPECIES Module  = CInt(ArablecropPerc) ,,% (0...100),Grid cell,1,Int16,EA new 17/11/2015
